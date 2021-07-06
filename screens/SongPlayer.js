@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {Component} from 'react';
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -18,6 +18,7 @@ import {
   View,
   Image,
   ImageView,
+  Dimensions,
 } from 'react-native';
 
 import {
@@ -28,29 +29,40 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const SongPlayer = () => {
-  return (
-    <React.Fragment>
-      <SafeAreaView style={styles.header}>
-        <Image
-          style={styles.img}
-          source={require('../img/Legends.png')}></Image>
-      </SafeAreaView>
-    </React.Fragment>
-  );
-};
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
+
+class SongPlayer extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.textWrapper}>
+          <Text style={styles.myText}>Login</Text>
+        </View>
+      </View>
+    );
+  }
+}
 export default SongPlayer;
 
 const styles = StyleSheet.create({
-  header: {
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: hp(50),
+    backgroundColor: '#ffffe0'
+  },
+  textWrapper: {
+    
+    textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-    flex: 1,
+    width: wp(50),
+    backgroundColor: `#32cd32`
   },
-  img: {
-    width: 350,
-    height: 350,
-    resizeMode: 'contain',
-  },
+  myText: {},
 });
