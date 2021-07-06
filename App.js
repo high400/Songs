@@ -27,39 +27,42 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import SongPlayer from './screens/SongPlayer';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
-
-const App: () => Node = () => {
-  
-
+const App = () => {
   return (
-    <SafeAreaView >
-      <StatusBar />
-      <ScrollView
-        >
-        <SongPlayer />
-
-      </ScrollView>
-    </SafeAreaView>
+    <React.Fragment>
+      <SongPlayer />
+      <View style={styles.container1}>
+        <View style={styles.slide}></View>
+      </View>
+      <View style={styles.container2}>
+        <View style={styles.body}></View>
+      </View>
+    </React.Fragment>
   );
 };
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  container1: {
+      alignItems: 'center',
+      justifyContent: 'center'
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+  slide: {
+    backgroundColor: '#808080',
+    width: 50,
+    height: 50,
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
+  container2: {
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  highlight: {
-    fontWeight: '700',
+
+  body: {
+    width: 350,
+    height: 350,
+    resizeMode: 'contain',
+    backgroundColor: '#8fbc8f',
   },
 });
 

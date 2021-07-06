@@ -16,6 +16,8 @@ import {
   Text,
   useColorScheme,
   View,
+  Image,
+  ImageView,
 } from 'react-native';
 
 import {
@@ -26,73 +28,29 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-
-
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
+const SongPlayer = () => {
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-      
-    </View>
-    
+    <React.Fragment>
+      <SafeAreaView style={styles.header}>
+        
+        <ScrollView contentInsetAdjustmentBehavior="automatic">
+            <Image style={styles.img} source={require('../img/Legends.png')}></Image>
+        </ScrollView>
+      </SafeAreaView>
+    </React.Fragment>
   );
 };
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-     
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
+export default SongPlayer;
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
+    header: {
+        alignItems: 'center',
+        justifyContent: 'center', 
+    },
+    img: {
+        width: 350, 
+        height: 350,
+        resizeMode: 'contain',
+    }
 });
-
-export default App;
