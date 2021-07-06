@@ -32,10 +32,9 @@ const SongPlayer = () => {
   return (
     <React.Fragment>
       <SafeAreaView style={styles.header}>
-        
-        <ScrollView contentInsetAdjustmentBehavior="automatic">
-            <Image style={styles.img} source={require('../img/Legends.png')}></Image>
-        </ScrollView>
+        <Image
+          style={styles.img}
+          source={require('../img/Legends.png')}></Image>
       </SafeAreaView>
     </React.Fragment>
   );
@@ -44,13 +43,14 @@ const SongPlayer = () => {
 export default SongPlayer;
 
 const styles = StyleSheet.create({
-    header: {
-        alignItems: 'center',
-        justifyContent: 'center', 
-    },
-    img: {
-        width: 350, 
-        height: 350,
-        resizeMode: 'contain',
-    }
+  header: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
+  },
+  img: {
+    width: 350,
+    height: 350,
+    resizeMode: 'contain',
+  },
 });

@@ -46,7 +46,8 @@ const App = () => {
 const styles = StyleSheet.create({
   container1: {
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      flex: 0,
   },
   slide: {
     backgroundColor: '#808080',
