@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -20,14 +20,19 @@ import {
   Dimensions,
 } from 'react-native';
 
-
+import {Icon} from 'react-native-elements';
 
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
+
+
 class SongPlayer extends Component {
+
+  
+
   render() {
     return (
       <React.Fragment>
@@ -43,7 +48,9 @@ class SongPlayer extends Component {
         </View>
         <View style={styles.container3}></View>
         <View style={styles.container4}></View>
-        <View style={styles.container5}></View>
+        <View style={styles.container5}>
+          
+        </View>
       </React.Fragment>
     );
   }
