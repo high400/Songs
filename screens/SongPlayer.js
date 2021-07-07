@@ -42,10 +42,18 @@ class SongPlayer extends Component {
           style={styles.bottomContainer}>
           <View
             style={styles.bottomControls}>
+            <TouchableOpacity onPress={() => {}}>
             <Ionicons name="heart-outline" size={30} />
+            </TouchableOpacity> 
+            <TouchableOpacity onPress={() => {}}>
+            <Ionicons name="repeat" size={30} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => {}}>
+            <Ionicons name="share-outline" size={30} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => {}}>
             <Ionicons name="heart-outline" size={30} />
-            <Ionicons name="heart-outline" size={30} />
-            <Ionicons name="heart-outline" size={30} />
+            </TouchableOpacity>
           </View>
         </View>
       </SafeAreaView>
@@ -84,7 +92,8 @@ const styles = StyleSheet.create({
   {
     borderTopWidth: 1, 
     borderTopColor: 'black', 
-    width: width
+    width: width,
+    
   },
   bottomControls: {
     flexDirection: 'row',
