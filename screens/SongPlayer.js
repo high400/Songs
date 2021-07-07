@@ -55,7 +55,7 @@ class SongPlayer extends Component {
         </View>
         <View style={styles.container4}></View>
         <View style={styles.container5}>
-          <Ionicons name="heart-outline" size={20} /> 
+          <Ionicons name="heart-outline" size={20} />
         </View>
       </React.Fragment>
     );
@@ -76,12 +76,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-
     backgroundColor: `red`,
   },
   img: {
     width: wp(90),
-
     resizeMode: 'contain',
     borderRadius: 20,
   },
