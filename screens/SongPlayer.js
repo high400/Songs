@@ -27,12 +27,9 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-
+import Slider from '@react-native-community/slider';
 
 class SongPlayer extends Component {
-
-  
-
   render() {
     return (
       <React.Fragment>
@@ -46,11 +43,17 @@ class SongPlayer extends Component {
         <View style={styles.container2}>
           <Text style={styles.text}>Ghost of Tsushima</Text>
         </View>
-        <View style={styles.container3}></View>
-        <View style={styles.container4}></View>
-        <View style={styles.container5}>
-          
+        <View style={styles.container3}>
+          <Slider
+            style={{width: 300, height: 60}}
+            minimumValue={0}
+            maximumValue={1}
+            minimumTrackTintColor="#FFFFFF"
+            maximumTrackTintColor="#000000"
+          />
         </View>
+        <View style={styles.container4}></View>
+        <View style={styles.container5}></View>
       </React.Fragment>
     );
   }
@@ -99,6 +102,7 @@ const styles = StyleSheet.create({
   container3: {
     flex: 0.5,
     backgroundColor: '#fdf5e6',
+    alignItems: 'center',
   },
   // End of Container 3
 
