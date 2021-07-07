@@ -33,14 +33,18 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 const App = () => {
   return (
     <React.Fragment>
+    <View style={styles.container}>
+    <StatusBar barStyle="light-content" />
       <SongPlayer />
-
+    </View>
     </React.Fragment>
   );
 };
 
 const styles = StyleSheet.create({
- 
+    container: {
+      flex: 1,
+    }
 });
 
 export default App;
