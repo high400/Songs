@@ -38,31 +38,73 @@ import {
 class SongPlayer extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.textWrapper}>
-          <Text style={styles.myText}>Login</Text>
+      <React.Fragment>
+      <View style={styles.container1}>
+        <View style={styles.imgWrapper}>
+          <Image style={styles.img} source={require('../img/Legends.png')}></Image>
         </View>
       </View>
+      <View style={styles.container2}></View>
+      <View style={styles.container3}></View>
+      <View style={styles.container4}></View>
+      <View style={styles.container5}></View>
+      </React.Fragment>
     );
   }
 }
 export default SongPlayer;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  // Beginning of Container 1
+  container1: {
+    flex: 3,
     justifyContent: 'center',
     alignItems: 'center',
-    height: hp(50),
     backgroundColor: '#ffffe0'
   },
-  textWrapper: {
+  imgWrapper: {
     
     textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-    width: wp(50),
-    backgroundColor: `#32cd32`
+    width: wp(80),
+    backgroundColor: `red`
   },
-  myText: {},
+  img: {
+    width: wp(80),
+    height: hp(60),
+    resizeMode: 'contain', 
+    borderRadius: 20
+  },
+  // End of Container 1
+
+  // Beginning of Container 2
+  container2: {
+    flex: 1, 
+    backgroundColor: '#ffc0cb',
+  },
+  // End of Container 2 
+
+  // Beginning of Container 3
+  container3: {
+    flex: .5,
+    backgroundColor: '#fdf5e6',
+  },
+  // End of Container 3 
+
+  // Beginning of Container 4
+  container4: {
+    flex: 1,
+    backgroundColor: '#eee8aa',
+  },
+
+  // End of Container 4
+
+  // Beginning of Container 5
+  container5: {
+    flex: .5,
+    backgroundColor: '#ffdab9',
+  }
+
+  // End of Container 5 
 });
