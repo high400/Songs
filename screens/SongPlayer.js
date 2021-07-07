@@ -28,6 +28,7 @@ import {
 } from 'react-native-responsive-screen';
 
 import Slider from '@react-native-community/slider';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 class SongPlayer extends Component {
   render() {
@@ -53,7 +54,9 @@ class SongPlayer extends Component {
           />
         </View>
         <View style={styles.container4}></View>
-        <View style={styles.container5}></View>
+        <View style={styles.container5}>
+          <Ionicons name="heart-outline" size={20} /> 
+        </View>
       </React.Fragment>
     );
   }
@@ -103,6 +106,7 @@ const styles = StyleSheet.create({
     flex: 0.5,
     backgroundColor: '#fdf5e6',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   // End of Container 3
 
