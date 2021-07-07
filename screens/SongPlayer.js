@@ -34,20 +34,23 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-
 class SongPlayer extends Component {
   render() {
     return (
       <React.Fragment>
-      <View style={styles.container1}>
-        <View style={styles.imgWrapper}>
-          <Image style={styles.img} source={require('../img/Legends.png')}></Image>
+        <View style={styles.container1}>
+          <View style={styles.imgWrapper}>
+            <Image
+              style={styles.img}
+              source={require('../img/Legends.png')}></Image>
+          </View>
         </View>
-      </View>
-      <View style={styles.container2}></View>
-      <View style={styles.container3}></View>
-      <View style={styles.container4}></View>
-      <View style={styles.container5}></View>
+        <View style={styles.container2}>
+          <Text style={styles.text}>Ghost of Tsushima</Text>
+        </View>
+        <View style={styles.container3}></View>
+        <View style={styles.container4}></View>
+        <View style={styles.container5}></View>
       </React.Fragment>
     );
   }
@@ -57,40 +60,48 @@ export default SongPlayer;
 const styles = StyleSheet.create({
   // Beginning of Container 1
   container1: {
-    flex: 3,
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ffffe0'
+    backgroundColor: '#ffffe0',
+    flexDirection: 'column',
   },
   imgWrapper: {
-    
     textAlign: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-    width: wp(80),
-    backgroundColor: `red`
+
+    backgroundColor: `red`,
   },
   img: {
-    width: wp(80),
-    height: hp(60),
-    resizeMode: 'contain', 
-    borderRadius: 20
+    width: wp(90),
+
+    resizeMode: 'contain',
+    borderRadius: 20,
   },
+
   // End of Container 1
 
   // Beginning of Container 2
   container2: {
-    flex: 1, 
+    flex: 0.5,
     backgroundColor: '#ffc0cb',
+    alignItems: 'center',
+    justifyContent: 'center',
+    
   },
-  // End of Container 2 
+    text: {
+    color: 'white',
+    fontSize: 30
+  },
+  // End of Container 2
 
   // Beginning of Container 3
   container3: {
-    flex: .5,
+    flex: 0.5,
     backgroundColor: '#fdf5e6',
   },
-  // End of Container 3 
+  // End of Container 3
 
   // Beginning of Container 4
   container4: {
@@ -102,9 +113,9 @@ const styles = StyleSheet.create({
 
   // Beginning of Container 5
   container5: {
-    flex: .5,
+    flex: 0.5,
     backgroundColor: '#ffdab9',
-  }
+  },
 
-  // End of Container 5 
+  // End of Container 5
 });
