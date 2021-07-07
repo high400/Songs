@@ -55,7 +55,7 @@ class SongPlayer extends Component {
         </View>
         <View style={styles.container4}></View>
         <View style={styles.container5}>
-          <Ionicons name="heart-outline" size={20} />
+          <Ionicons name="heart-outline" size={50} />
         </View>
       </React.Fragment>
     );
@@ -120,6 +120,7 @@ const styles = StyleSheet.create({
   container5: {
     flex: 0.5,
     backgroundColor: '#ffdab9',
+    justifyContent: 'center',
   },
 
   // End of Container 5
