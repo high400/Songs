@@ -7,7 +7,6 @@
  */
 
 import React, {Component} from 'react';
-import type {Node} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -21,13 +20,7 @@ import {
   Dimensions,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+
 
 import {
   widthPercentageToDP as wp,
@@ -88,11 +81,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffc0cb',
     alignItems: 'center',
     justifyContent: 'center',
-    
   },
-    text: {
+  text: {
     color: 'white',
-    fontSize: 30
+    fontSize: 30,
   },
   // End of Container 2
 
