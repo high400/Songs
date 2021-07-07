@@ -41,22 +41,26 @@ class SongPlayer extends Component {
               source={require('../img/Legends.png')}></Image>
           </View>
         </View>
+
         <View style={styles.container2}>
           <Text style={styles.text}>Ghost of Tsushima</Text>
         </View>
         <View style={styles.container3}>
           <Slider
-            style={{width: 300, height: 60}}
+            style={{width: '100%', height: 60}}
             minimumValue={0}
             maximumValue={1}
-            minimumTrackTintColor="#FFFFFF"
+            minimumTrackTintColor="#da70d6"
             maximumTrackTintColor="#000000"
           />
         </View>
         <View style={styles.container4}></View>
-        <View style={styles.container5}>
-          <Ionicons name="heart-outline" size={50} />
-        </View>
+        <SafeAreaView style={styles.container5}>
+          <View style={styles.container5}>
+            <Ionicons name="heart-outline" size={40} color="#000000" />
+            <Ionicons name="repeat" size={40} color="#000000" />
+          </View>
+        </SafeAreaView>
       </React.Fragment>
     );
   }
@@ -69,6 +73,7 @@ const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
+    height: hp(30),
     backgroundColor: '#ffffe0',
     flexDirection: 'column',
   },
@@ -92,6 +97,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffc0cb',
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'column',
   },
   text: {
     color: 'white',
@@ -105,6 +111,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fdf5e6',
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'row',
+    width: '100%',
   },
   // End of Container 3
 
@@ -112,6 +120,7 @@ const styles = StyleSheet.create({
   container4: {
     flex: 1,
     backgroundColor: '#eee8aa',
+    flexDirection: 'column',
   },
 
   // End of Container 4
@@ -120,7 +129,9 @@ const styles = StyleSheet.create({
   container5: {
     flex: 0.5,
     backgroundColor: '#ffdab9',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    width: '100%'
   },
 
   // End of Container 5
