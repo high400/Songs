@@ -52,7 +52,7 @@ class SongPlayer extends Component {
             <Ionicons name="share-outline" size={30} />
             </TouchableOpacity>
             <TouchableOpacity onPress={() => {}}>
-            <Ionicons name="heart-outline" size={30} />
+            <Ionicons name="ellipsis-horizontal" size={30} />
             </TouchableOpacity>
           </View>
         </View>
@@ -92,12 +92,12 @@ const styles = StyleSheet.create({
   {
     borderTopWidth: 1, 
     borderTopColor: 'black', 
-    width: width,
+    width: '100%',
     
   },
   bottomControls: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     width: '100%',
   }
   // End of Container 5
