@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   // Beginning of Container
   container: {
     flex: 1,
-    backgroundColor: 'rgb(56,56,56)',
+    backgroundColor: '#393E46',
   },
   mainContainer: {
     flex: 1,
